@@ -1,6 +1,6 @@
 WITH raw_district AS 
 (
-select * from RETAIL_BANKING_DEMO.RAW.raw_district
+select * from {{ source('retail_banking_demo','district') }}
 )
 SELECT
 district_id
@@ -10,4 +10,4 @@ district_id
 ,region
 ,division
 FROM raw_district
-;
+

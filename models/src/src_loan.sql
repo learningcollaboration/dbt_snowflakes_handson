@@ -1,6 +1,6 @@
 WITH raw_loan AS 
 (
-select * from RETAIL_BANKING_DEMO.RAW.raw_loan
+select * from {{ source('retail_banking_demo','loan') }}
 )
 SELECT
 loan_id
@@ -13,4 +13,3 @@ loan_id
 ,purpose
 ,to_char(to_date(fulldate,'YYYY-MM-DD'),'YYYYMMDD') AS date_dim_id
 FROM raw_loan
-;

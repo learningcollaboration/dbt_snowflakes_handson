@@ -1,6 +1,6 @@
 WITH raw_trans AS 
 (
-select * from RETAIL_BANKING_DEMO.RAW.raw_trans
+select * from {{ source('retail_banking_demo','trans') }}
 )
 SELECT
 trans_id
@@ -14,4 +14,3 @@ trans_id
 ,account
 ,to_char(to_date(fulldate,'YYYY-MM-DD'),'YYYYMMDD') AS date_dim_id
 FROM raw_trans
-;

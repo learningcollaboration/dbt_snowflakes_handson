@@ -1,0 +1,26 @@
+version: 2
+
+sources:
+  - name: retail_banking_demo
+    schema: RAW
+    tables:
+      - name: account
+        identifier: raw_account
+
+      - name: card
+        identifier: raw_card
+
+      - name: client
+        identifier: raw_client
+
+      - name: disposition
+        identifier: raw_disposition
+
+      - name: district
+        identifier: raw_district
+
+      - name: loan
+        identifier: raw_loan
+
+      - name: trans
+        identifier: raw_trans

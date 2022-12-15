@@ -1,6 +1,6 @@
 WITH raw_client AS 
 (
-select * from RETAIL_BANKING_DEMO.RAW.raw_client
+select * from {{ source('retail_banking_demo','client') }}
 )
 SELECT
 client_id
@@ -12,4 +12,3 @@ client_id
 ,zipcode
 ,district_id
 FROM raw_client
-;
