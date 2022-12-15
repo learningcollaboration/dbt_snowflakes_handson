@@ -1,0 +1,11 @@
+WITH raw_disposition AS 
+(
+select * from RETAIL_BANKING_DEMO.RAW.raw_disposition
+)
+SELECT
+disp_id
+,client_id
+,account_id
+,type
+FROM raw_disposition
+;
